@@ -1,0 +1,7 @@
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\bin\Debug\CalculIMC.exe.config
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\bin\Debug\CalculIMC.exe
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\bin\Debug\CalculIMC.pdb
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\obj\Debug\CalculIMC.csprojAssemblyReference.cache
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\obj\Debug\CalculIMC.csproj.CoreCompileInputs.cache
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\obj\Debug\CalculIMC.exe
+D:\Doctorat\VisualStudioProjects\CalculIMC\CalculIMC\obj\Debug\CalculIMC.pdb
