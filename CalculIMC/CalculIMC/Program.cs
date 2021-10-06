@@ -17,17 +17,17 @@ namespace CalculIMC
 
             double taille = 0;
             taille = EntrerParametre();
-
+            
             Console.WriteLine("Veuillez inscrire votre poids en kg");
 
             double poids = 0;
             poids = EntrerParametre();
 
-            double imc = poids / (taille * taille);
+            double imc = poids/(taille * taille);
 
             string categorie = CalculCategorie(imc);
 
-            Console.WriteLine("Votre est IMC est égal à : " + imc.ToString(CultureInfo.InvariantCulture));
+            Console.WriteLine("Votre est IMC est égal à : "+imc.ToString(CultureInfo.InvariantCulture));
             Console.WriteLine("Votre catégorie est : " + categorie);
 
             Console.WriteLine("-----------------------------------------------------");
