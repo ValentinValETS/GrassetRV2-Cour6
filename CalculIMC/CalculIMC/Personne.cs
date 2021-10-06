@@ -31,9 +31,9 @@ namespace CalculIMC
             Console.WriteLine("Objet Personne détruit.");
         }
 
-        //public void SayHi()
-        //{
-        //    Console.WriteLine("Bonjour ! Je m'appelle " + this.name + " et j'ai " + this.age + " ans.");
-        //}
+        public void SayHi()
+        {
+            Console.WriteLine("Bonjour ! Je m'appelle " + this.name + " et j'ai " + this.age + " ans.");
+        }
     }
 }
