@@ -16,41 +16,48 @@ namespace CalculIMC
             Console.WriteLine("Veuillez inscrire votre taille en m");
 
             double taille = 0;
+            taille = EntrerParametre();
 
-            do
-            {
-                try
-                {
-                    taille = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                }
-                catch (Exception)
-                {
-
-                    Console.WriteLine("Échec de la lecture de la taille en m, veuillez corriger votre dernière entrée");
-                }
-            } while (taille == 0);
-
-            
             Console.WriteLine("Veuillez inscrire votre poids en kg");
 
             double poids = 0;
+            poids = EntrerParametre();
+
+            double imc = poids / (taille * taille);
+
+            string categorie = CalculCategorie(imc);
+
+            Console.WriteLine("Votre est IMC est égal à : " + imc.ToString(CultureInfo.InvariantCulture));
+            Console.WriteLine("Votre catégorie est : " + categorie);
+
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("Calcul terminé, veuillez taper sur n'importe quelle touche pour continuer...");
+
+            Console.ReadKey();
+        }
+
+        static double EntrerParametre()
+        {
+            double parametre = 0;
             do
             {
                 try
                 {
-                    poids = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                    parametre = Double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 }
                 catch (Exception)
                 {
 
-                    Console.WriteLine("Échec de la lecture du poids en kg, veuillez corriger votre dernière entrée");
+                    Console.WriteLine("Échec de lecture, veuillez corriger votre dernière entrée");
                 }
-            } while (poids == 0);
+            } while (parametre == 0);
 
+            return parametre;
+        }
 
-            double imc = poids/(taille * taille);
+        static string CalculCategorie(double imc)
+        {
             string categorie = "";
-
             if (imc < 18.5)
             {
                 categorie = "Poids insuffisant";
@@ -71,14 +78,8 @@ namespace CalculIMC
             {
                 categorie = "Inconnue";
             }
-
-            Console.WriteLine("Votre est IMC est égal à : "+imc.ToString(CultureInfo.InvariantCulture));
-            Console.WriteLine("Votre catégorie est : " + categorie);
-
-            Console.WriteLine("-----------------------------------------------------");
-            Console.WriteLine("Calcul terminé, veuillez taper sur n'importe quelle touche pour continuer...");
-
-            Console.ReadKey();
+            return categorie;
         }
+
     }
 }
